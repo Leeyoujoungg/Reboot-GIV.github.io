@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=1920">
+
+    <meta charset="UTF-8" />
+    <title>DIV</title>
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- ───────────── 01. NAV ───────────── -->
+<nav id="navbar">
+    <ul>
+        <li><a href="#section-ongi-desc">About</a></li>
+        <li><a href="#section-home">App</a></li>
+        <li><a href="#design-section">Design</a></li>
+    </ul>
+</nav>
+
+<!-- ───────────── 02. HERO ───────────── -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-semicircle"></div>
+    <p class="hero-subtitle">투명한 나눔, 디브가 전달해줍니다.</p>
+    <div class="hero-logo-wrap">
+        <img src="images/Div.png" alt="DIV 로고" class="hero-logo-img">
+    </div>
+    <div class="hero-phone">
+        <img src="images/mainPhone.png" alt="폰 이미지">
+    </div>
+</section>
+
+<!-- ───────────── 03. 페르소나 / 기부자 감소 ───────────── -->
+<section id="section-donors" class="section-donors">
+    <div class="donors-sticky">
+
+        <div class="donors-overlay"></div>
+
+        <div class="donors-people">
+            <div class="person person--1"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--2"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--3"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--4"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--5"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--6"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--7"><img src="images/Purson.png" alt="" class="person-img"></div>
+            <div class="person person--8"><img src="images/Purson.png" alt="" class="person-img"></div>
+        </div>
+
+        <div class="donors-bubbles">
+            <span class="bubble bubble--1">"고정지출 금액을 올려달라고 해서"</span>
+            <span class="bubble bubble--2">"세금공제가 하기 번거로워서"</span>
+            <span class="bubble bubble--3">"내 돈이 어디로 갔는지 알 수 없어서"</span>
+            <span class="bubble bubble--4">"신뢰가 안가서"</span>
+        </div>
+
+        <p class="donors-text donors-text--1">기부는 했지만, 그 이후는 보이지 않았습니다</p>
+        <p class="donors-text donors-text--2">보이지 않는 변화는 신뢰를 만들기 어렵습니다</p>
+        <p class="donors-text donors-text--3">만약 내 기부가 어떻게 쓰였는지, 한눈에 보인다면?</p>
+        <p class="donors-text donors-text--4">사용처, 공제 혜택, 그리고 만들어낸 변화까지</p>
+        <p class="donors-text donors-text--5">DIV는 끊어진 기부 경험을 다시 연결합니다</p>
+
+    </div>
+</section>
+
+<!-- ───────────── 04. 웹 구현 (기부 과정 체험) ───────────── -->
+<section class="app-experience-section">
+    <div class="exp-scene">
+
+        <!-- 왼쪽 텍스트 블록 -->
+        <div class="exp-left-text">
+            <p class="exp-left-label">APP EXPERIENCE</p>
+            <h2 class="exp-left-title">직접 눌러보며<br>기부 과정을 체험해보세요.</h2>
+            <p class="exp-left-desc">탐색부터 결제까지, 디브의 기부 흐름을<br>실제 앱처럼 경험할 수 있습니다.</p>
+        </div>
+
+        <!-- 원 장식 -->
+        <div class="exp-circle" id="expCircle"></div>
+
+        <!-- 오른쪽 하단 고정 텍스트 -->
+        <p class="exp-guide-text">탐색탭을 눌러보세요!</p>
+
+        <!-- 점선 + 점 -->
+        <div class="exp-dotline" id="expDotline"></div>
+        <div class="exp-dot" id="expDot"></div>
+
+        <!-- 말풍선 -->
+        <div class="exp-bubble-wrap" id="expBubble">
+            <div class="exp-bubble" id="expBubbleText">탐색탭을 눌러보세요!</div>
+        </div>
+
+        <!-- 폰 목업 -->
+        <div class="exp-phone-outer" id="expPhoneOuter">
+            <div class="phone-mockup">
+                <div id="app-viewport"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ───────────── 05. 캐릭터 / DiV 소개 (오버뷰) ───────────── -->
+<section id="section-ongi-desc" class="section-ongi-desc">
+    <div class="ongi-desc-left">
+        <h2 class="ongi-title">DIV</h2>
+        <p>DIV는 기부 이후의 경험까지 연결하는 기부 서비스입니다 <br/>사용처, 예상 공제 혜택, 그리고 만들어낸 변화를 통해 기부의 가치를 직접 체감할 수 있습니다 </p>
+    </div>
+    <div class="ongi-mascot-wrap">
+        <img src="images/MasC.png" alt="디브 마스코트" class="ongi-mascot-img">
+    </div>
+    <img src="images/Bakk.png" class="ongi-wave-img" alt="">
+    <div class="ongi-waves">
+        <div class="ongi-wave ongi-wave--1"></div>
+        <div class="ongi-wave ongi-wave--2"></div>
+        <div class="ongi-wave ongi-wave--3"></div>
+    </div>
+</section>
+
+<!-- ───────────── 06. 앱 제작 배경 ───────────── -->
+<section id="section-about" class="section-about">
+    <div class="about-inner">
+        <h2 class="about-title about-title--center">신뢰와 실질적 혜택을 기반으로,<br>기부 경험을 다시 설계하다.</h2>
+        <div class="about-desc-box">
+            <p class="about-desc" style="text-align:center;">
+                사용자는 더 이상 좋은 일이라는 이유만으로 기부하지 않습니다.<br>
+                기부금의 사용처를 신뢰할 수 있어야 하며,
+                공제혜택과 같은 실질적 가치 또한 체감하길 원합니다.<br>
+                본 프로젝트는 투명한 기부 구조와 혜택 중심의 경험 설계를 통해,
+                사용자가 신뢰하고 참여할 수 있는 기부 플랫폼을 구축하고자 합니다.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────── 07. 문제 정의 ───────────── -->
+<section id="section-research" class="section-research">
+    <div class="research-inner">
+        <p class="research-label">Desk Research</p>
+        <h2 class="research-title">기부 참여를 결정하는 것은 무엇일까요?</h2>
+        <p class="research-sub">경제적 부담, 공제 혜택, 기부단체 신뢰도 데이터를 통해 기부 참여 요인을 분석했습니다.</p>
+
+        <div class="research-cards-row">
+            <div class="research-main-stat">
+                <p class="research-main-label">Q1 &nbsp; 기부를 안하는 이유가 뭘까요?</p>
+                <p class="research-main-desc">경제적 부담과 기부에 대한 무관심이 주요 이유로 나타났습니다.</p>
+                <div class="research-bars">
+                    <div class="research-bar-row">
+                        <span class="research-bar-year">기부에 무관심</span>
+                        <div class="research-bar-track">
+                            <div class="research-bar-fill" style="width:37.5%"></div>
+                        </div>
+                        <span class="research-bar-val">37.5%</span>
+                    </div>
+                    <div class="research-bar-row">
+                        <span class="research-bar-year">경제적 부담</span>
+                        <div class="research-bar-track">
+                            <div class="research-bar-fill research-bar-fill--blue" style="width:46.5%"></div>
+                        </div>
+                        <span class="research-bar-val research-blue">46.5%</span>
+                    </div>
+                </div>
+                <p class="research-source" style="margin-top:16px;">국가 데이터처 2025년 사회조사</p>
+            </div>
+
+            <div class="research-cards">
+                <div class="research-card">
+                    <p class="research-q">Q2 &nbsp; 사람들은 경제적 혜택에 반응할까요?</p>
+                    <p class="research-stat">+66.6%</p>
+                    <p class="research-stat-desc">세액공제를 목적으로 한 기부는 2년 전 대비 66.6% 증가했습니다</p>
+                    <p class="research-source">국가 데이터처 2025년 사회조사</p>
+                </div>
+                <div class="research-card">
+                    <p class="research-q">Q3 &nbsp; 기부에 대한 신뢰는 충분할까요?</p>
+                    <p class="research-stat">59.7%</p>
+                    <p class="research-stat-desc">2명 중 1명 이상은 기부단체가 기부자를 속일 수 있다고 생각했습니다</p>
+                    <div class="research-bars" style="margin-top:8px;">
+                        <div class="research-bar-row">
+                            <span class="research-bar-year">2025년</span>
+                            <div class="research-bar-track"><div class="research-bar-fill research-bar-fill--blue" style="width:59.7%"></div></div>
+                            <span class="research-bar-val research-blue">59.7%</span>
+                        </div>
+                        <div class="research-bar-row">
+                            <span class="research-bar-year">2024년</span>
+                            <div class="research-bar-track"><div class="research-bar-fill" style="width:55%"></div></div>
+                            <span class="research-bar-val">55.0%</span>
+                        </div>
+                        <div class="research-bar-row">
+                            <span class="research-bar-year">2023년</span>
+                            <div class="research-bar-track"><div class="research-bar-fill" style="width:56.3%"></div></div>
+                            <span class="research-bar-val">56.3%</span>
+                        </div>
+                    </div>
+                    <p class="research-source" style="margin-top:8px;">통계청 한국 사회조사 2023~2025</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-insight">
+            <p class="research-insight-title">기부에는 혜택과 신뢰가 모두 필요</p>
+            <p class="research-insight-desc">세액공제를 목적으로 한 기부는 증가하고 있지만, 절반 이상의 사람들은 여전히 기부단체를 신뢰하지 못하고 있습니다.<br>기부 참여를 높이기 위해서는 경제적 혜택뿐 아니라 기부 과정의 투명성을 제공할 필요가 있습니다.</p>
+        </div>
+    </div>
+</section>
+<!-- ───────────── 08. 기능 나열 (Core Features) ───────────── -->
+<section id="section-features" class="section-features">
+    <div class="features-sticky">
+        <div>
+            <p class="features-label">Core Features</p>
+            <h2 class="features-title">기부를 다시 정의합니다</h2>
+        </div>
+        <div class="features-cards-row">
+            <div class="feat-card feat-card--1">
+                <span class="feat-step">01</span>
+                <div class="feat-illust">💸</div>
+                <h3>투명한 기부금 공개</h3>
+                <p>내가 기부한 금액이 어디에 사용되는지, <br> 사용 내역을 한눈에 확인할 수 있습니다.</p>
+                <div class="feat-tag">신뢰 기반</div>
+            </div>
+            <div class="feat-card feat-card--2">
+                <span class="feat-step">02</span>
+                <div class="feat-illust">📊</div>
+                <h3>기부 효과 체감</h3>
+                <p>기부 이후 만들어진 변화와 성과를 확인하며, <br> 내 기부의 가치를 직접 체감할 수 있습니다.</p>
+                <div class="feat-tag">지속적 경험</div>
+            </div>
+            <div class="feat-card feat-card--3">
+                <span class="feat-step">03</span>
+                <div class="feat-illust">🧾</div>
+                <h3>공제혜택 시뮬레이션</h3>
+                <p>기부 금액에 따른 예상 공제액과<br> 실질 부담금을 미리 확인할 수 있습니다.</p>
+                <div class="feat-tag">실질적 혜택</div>
+            </div>
+            <div class="feat-card feat-card--4">
+                <span class="feat-step">04</span>
+                <div class="feat-illust">👆</div>
+                <h3>간편 결제</h3>
+                <p>자주 사용하는 결제 수단을 미리 등록하고, <br> 더 빠르고 간편하게 기부할 수 있습니다.</p>
+                <div class="feat-tag">UX 혁신</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────── 09. 디자인 정의 ───────────── -->
+<section id="design-section" class="design-section">
+
+    <!-- 상단 텍스트 (박스 밖, 배경 위) -->
+    <div class="top-text-area">
+        <p class="service-concept">Service Concept</p>
+        <h2 class="transparency-title">기부의 디자인</h2>
+        <p class="sub-description">
+            앱 아이콘은 기부를 상징하는 하트와 도움의 손길을 형상화하여 제작하였습니다.
+        </p>
+    </div>
+
+    <!-- 좌(회색) / 우(파랑) 박스 -->
+    <div class="top-wrapper">
+        <div class="left-gray-box">
+            <h1 class="main-title">DIV</h1>
+        </div>
+        <div class="right-blue-box">
+            <img src="images/pp.png" alt="앱 이미지" class="app-img">
+        </div>
+    </div>
+
+    <!-- 하단 흰색 카드 -->
+    <div class="ds-card-container">
+        <div class="ds-card">
+            <h3 class="ds-title">Design System</h3>
+
+            <div class="ds-grid">
+
+                <!-- 왼쪽: 타이포그래피 -->
+                <div class="ds-col">
+                    <p class="ds-label">Typography</p>
+                    <div class="typo-main">Pretendard<br>프리텐다드</div>
+
+                    <p class="typo-sublabel">Headline</p>
+                    <div class="typo-list">
+                        <div class="typo-item typo-h1"><span class="typo-tag">H1</span> 프리텐다드</div>
+                        <div class="typo-item typo-h2"><span class="typo-tag">H2</span> 디브는</div>
+                    </div>
+
+                    <p class="typo-sublabel">Title</p>
+                    <div class="typo-list">
+                        <div class="typo-item typo-small typo-t1"><span class="typo-tag">T1</span> Title24 Semibold</div>
+                    </div>
+
+                    <p class="typo-sublabel">Body</p>
+                    <div class="typo-list">
+                        <div class="typo-item typo-small typo-b1"><span class="typo-tag">B1</span> Body17 Semibold</div>
+                        <div class="typo-item typo-small typo-b2"><span class="typo-tag">B2</span> Body14 Medium</div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 컬러 + 아이콘 -->
+                <div class="ds-col">
+                    <p class="ds-label">Color</p>
+                    <div class="color-row-1">
+                        <div class="color-swatch-rect" style="background:#0F4C75; flex: 2.5;"></div>
+                        <div class="color-swatch-rect" style="background:#3282B8; flex: 1;"></div>
+                        <div class="color-swatch-rect" style="background:#BBE1FA; flex: 1;"></div>
+                        <div class="color-swatch-rect swatch-border" style="background:#F0F8FF; flex: 0.5;"></div>
+                    </div>
+                    <div class="color-row-2">
+                        <div class="color-swatch-rect swatch-border" style="background:#ffffff; flex: 1;"></div>
+                        <div class="color-swatch-rect" style="background:#ECECEC; flex: 1;"></div>
+                        <div class="color-swatch-rect" style="background:#555e6b; flex: 1;"></div>
+                        <div class="color-swatch-rect" style="background:#1B262C; flex: 2.5;"></div>
+                    </div>
+
+                    <p class="ds-label" style="margin-top: 14%;">Icon</p>
+                    <div class="icon-wrap">
+                        <div class="icon-grid-left">
+                            <div class="icon-row">
+                                <img src="images/icon01.png" alt="아이콘1" class="icon-item">
+                                <img src="images/icon02.png" alt="아이콘2" class="icon-item">
+                                <img src="images/icon03.png" alt="아이콘3" class="icon-item">
+                                <img src="images/icon04.png" alt="아이콘4" class="icon-item">
+                                <img src="images/icon05.png" alt="아이콘5" class="icon-item">
+                                <img src="images/icon06.png" alt="아이콘6" class="icon-item">
+                            </div>
+                            <div class="icon-row">
+                                <img src="images/icon07.png" alt="아이콘7" class="icon-item">
+                                <img src="images/icon08.png" alt="아이콘8" class="icon-item">
+                                <img src="images/icon09.png" alt="아이콘9" class="icon-item">
+                                <img src="images/icon10.png" alt="아이콘10" class="icon-item">
+                                <img src="images/icon11.png" alt="아이콘11" class="icon-item">
+                            </div>
+                            <div class="icon-row">
+                                <img src="images/icon12.png" alt="아이콘12" class="icon-item">
+                                <img src="images/icon13.png" alt="아이콘13" class="icon-item">
+                                <img src="images/icon14.png" alt="아이콘14" class="icon-item">
+                                <img src="images/icon15.png" alt="아이콘15" class="icon-item">
+                            </div>
+                        </div>
+                        <div class="icon-grid-right">
+                            <div class="icon-row">
+                                <img src="images/icon16.png" alt="아이콘16" class="icon-item">
+                                <img src="images/icon17.png" alt="아이콘17" class="icon-item">
+                                <img src="images/icon18.png" alt="아이콘18" class="icon-item">
+                                <img src="images/icon19.png" alt="아이콘19" class="icon-item">
+                            </div>
+                            <div class="icon-row">
+                                <img src="images/icon20.png" alt="아이콘20" class="icon-item">
+                                <img src="images/icon21.png" alt="아이콘21" class="icon-item">
+                                <img src="images/icon22.png" alt="아이콘22" class="icon-item">
+                                <img src="images/icon23.png" alt="아이콘23" class="icon-item">
+                            </div>
+                            <div class="icon-row">
+                                <img src="images/icon24.png" alt="아이콘24" class="icon-item">
+                                <img src="images/icon25.png" alt="아이콘25" class="icon-item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ───────────── 10. 기부 과정 인터랙션 (DISCOVER SCREEN) ───────────── -->
+<section id="section-discover-intro" class="section-discover-intro">
+    <div class="discover-container">
+        <p class="discover-label">DISCOVER SCREEN</p>
+        <h2 class="discover-main-title">원하는 기부처를 바로 찾고, 바로 확인하세요.</h2>
+        <p class="discover-sub-title">
+            긴급구호부터 아동·청소년, 소방관까지 다양한 카테고리에서 기부처를 탐색하고,<br/>
+            각 프로젝트의 모금 진행률과 마감 기한, 사연을 확인한 뒤 기부를 결정할 수 있습니다.
+        </p>
+
+        <div class="discover-phones-grid">
+            <div class="discover-phone-item">
+                <div class="step-box" style="margin-bottom: 20px;">STEP 1</div>
+                <img src="images/Phone01.png" alt="왼쪽 화면 이미지" class="discover-phone-img">
+            </div>
+            <div class="discover-phone-item">
+                <div class="step-box" style="margin-bottom: 20px;">STEP 2</div>
+                <img src="images/Phone02.png" alt="센터 화면 이미지" class="discover-phone-img">
+            </div>
+            <div class="discover-phone-item">
+                <div class="step-box" style="margin-bottom: 20px;">STEP 3</div>
+                <img src="images/Phone03.png" alt="오른쪽 화면 이미지" class="discover-phone-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ───────────── 11. 세액공제 (TAX DEDUCTION) ───────────── -->
+<section id="section-tax-flow" class="section-tax-flow-new">
+    <div class="tax-sticky-wrap">
+        <div class="tax-sticky-inner">
+
+            <div class="tax-new-header">
+                <p class="discover-label">TAX DEDUCTION SCREENS</p>
+                <h2 class="discover-main-title">질문으로 내 세액공제 혜택을 확인할 수 있습니다.</h2>
+                <p class="discover-sub-title">간단한 질문에 답하면 예상 세액공제 금액을 바로 확인할 수 있습니다.</p>
+            </div>
+
+            <div class="tax-phones-row">
+                <div class="tax-phone-slot" id="tax-slot-1">
+                    <div class="tax-phone-hover-wrap">
+                        <div class="tax-hover-text">
+                            <span class="tax-hover-title">인트로 화면</span>
+                            <span class="tax-hover-desc">복잡한 서류 없이,3가지 질문만으로<br> 내 절세 혜택을 미리 알 수 있어요</span>
+                        </div>
+                        <img src="images/2157.png" alt="세액공제 1단계" class="tax-phone-img">
+                    </div>
+                </div>
+                <div class="tax-phone-slot" id="tax-slot-2">
+                    <div class="tax-phone-hover-wrap">
+                        <div class="tax-hover-text">
+                            <span class="tax-hover-title">소득 유형 선택</span>
+                            <span class="tax-hover-desc">근로자, 사업자, 기타 중 본인의 소득 유형을 선택해요. <br>유형에 따라 적용되는 공제 방식이 달라져요</span>
+                        </div>
+                        <img src="images/2158.png" alt="세액공제 2단계" class="tax-phone-img">
+                    </div>
+                </div>
+                <div class="tax-phone-slot" id="tax-slot-3">
+                    <div class="tax-phone-hover-wrap">
+                        <div class="tax-hover-text">
+                            <span class="tax-hover-title">연봉 입력</span>
+                            <span class="tax-hover-desc">본인의 연간 소득을 입력해요.<br> 소득에 따라 공제율과 환급액이 달라져요</span>
+                        </div>
+                        <img src="images/2159.png" alt="세액공제 3단계" class="tax-phone-img">
+                    </div>
+                </div>
+                <div class="tax-phone-slot" id="tax-slot-4" style="position:relative;">
+                    <div class="tax-phone-hover-wrap">
+                        <div class="tax-hover-text">
+                            <span class="tax-hover-title">기부금 입력</span>
+                            <span class="tax-hover-desc">올해 다른 곳에서 기부한 금액을 입력해요.<br> 기존 기부 내역까지 합산해 계산해요</span>
+                        </div>
+                        <img src="images/2160.png" alt="세액공제 4단계" class="tax-phone-img" id="tax-img-2160">
+                        <img src="images/2160.png" alt="세액공제 4단계 완료" class="tax-phone-img tax-overlay-img" id="tax-img-2161" style="opacity:0;">
+                    </div>
+                </div>
+                <div class="tax-phone-slot tax-result-slot" id="tax-slot-5">
+                    <div class="tax-phone-hover-wrap">
+                        <div class="tax-hover-text">
+                            <span class="tax-hover-title">예상 절세액 결과</span>
+                            <span class="tax-hover-desc">입력한 정보를 바탕으로 <br>올해 돌려받을 금액을 한눈에 확인해요</span>
+                        </div>
+                        <div class="tax-result-phone">
+                            <div class="tax-result-scroll">
+                                <img src="images/Group 1597880484.png" alt="세액공제 결과" class="tax-result-inner-img">
+                            </div>
+                            <img src="images/Group 1597880485.png" alt="폰 프레임" class="tax-result-frame">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ───────────── 12. 배송 조회 + 기부 대시보드 ───────────── -->
+<div class="home-dashboard-wrap">
+    <img src="images/Bak00_1.png" alt="" class="home-dashboard-bak">
+
+    <!-- ───────────── 12-1. 홈 화면 소개 ───────────── -->
+    <section id="section-home" class="section-home">
+        <div class="section-home-top">
+            <h2 class="home-title">내 기부의 모든 것을 한 화면에서 확인하세요.</h2>
+            <h3 class="home-sub">기부 현황부터 배송 상태, 세액공제 혜택까지 홈 화면 하나로 한눈에 확인할 수 있습니다.</h3>
+        </div>
+        <div class="home-phone-wrap">
+            <img src="images/HomePhone.png" alt="홈 화면" class="home-phone-img">
+            <div class="home-ann home-ann--right1">세액공제 예상금액 미리 확인</div>
+            <div class="home-ann home-ann--left1">기부한 현황 실시간 확인</div>
+            <div class="home-ann home-ann--right2">기부 대시보드 확인</div>
+            <div class="home-ann home-ann--left2">상황에 맞는 기부 방식 바로 선택</div>
+            <div class="home-ann home-ann--right3">기부 물품 배송 현황 조회</div>
+        </div>
+    </section>
+
+    <!-- ───────────── 12-2. 대시보드 소개 ───────────── -->
+    <section id="section-dashboard" class="section-dashboard">
+        <div class="dashboard-content">
+            <p class="dashboard-label">DASHBOARD SCREENS</p>
+            <h2 class="dashboard-title">내 기부가 지금 어떻게 쓰이고 있는지 확인할 수 있습니다.</h2>
+            <h3 class="dashboard-sub">기부한 물품이 얼마나 사용됐는지 확인하고, 배송 현황까지 한눈에 추적할 수 있습니다.</h3>
+
+            <div class="dashboard-phones">
+                <div class="dashboard-phone-wrap">
+                    <img src="images/D1Phone.png" alt="기부 대시보드 화면" class="dashboard-phone">
+                    <div class="db-ann-container db-ann-container--left">
+                        <div class="db-speech-bubble db-speech-bubble--left">
+                            기부한 물품이 얼마나 사용됐는지 시간과 개수로 확인하고,<br/>더 필요하다면 바로 연장할 수 있습니다
+                        </div>
+                        <div class="db-ann-line"></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-phone-wrap">
+                    <img src="images/D2Phone.png" alt="배송 조회 화면" class="dashboard-phone">
+                    <div class="db-ann-container db-ann-container--right">
+                        <div class="db-speech-bubble db-speech-bubble--right">
+                            배송 단계별 현황부터 송장번호, 택배사 정보까지<br/>한 화면에서 추적할 수 있습니다.
+                        </div>
+                        <div class="db-ann-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ───────────── 13. 카드 등록 결제 (PAYMENT SCREEN) ───────────── -->
+<section id="section-payment" class="section-payment">
+    <div class="payment-showcase-container">
+
+        <div class="payment-center-header">
+            <p class="payment-label">PAYMENT SCREEN</p>
+            <h2 class="payment-main-title">
+                기부처, 예상 공제액, 결제까지<br>
+                DIV는 기부 전 필요한 정보를 확인하고 바로 참여할 수 있습니다.
+            </h2>
+        </div>
+
+        <div class="payment-showcase-content">
+
+            <div class="showcase-phone-center">
+                <img src="images/Phone04.png" alt="디브 결제 화면" class="payment-phone-large">
+            </div>
+
+            <div class="showcase-desc-box desc-right-top">
+                <p>금액을 입력하면 절세 예상금액, 세액공제 한도, 기부처별 사용 내역을 즉시 확인할 수 있습니다.</p>
+                <p>기부 전에 내 돈이 어디에 얼마나 쓰이는지 대시보드에서 투명하게 볼 수 있습니다.</p>
+            </div>
+
+            <div class="showcase-desc-box desc-left-bottom">
+                <p>금액 확인 후 비밀번호 입력 한 번으로 결제가 완료됩니다.</p>
+                <p>별도 앱 전환이나 인증 절차 없이 디브 앱 안에서 모든 결제가 처리됩니다.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ───────────── 14. 폰 화면들 ───────────── -->
+<section id="section-phonescreens" class="section-phonescreens">
+    <div class="phonescreens-bg-wrap">
+        <img src="images/manyPp.png" alt="폰 목업 스크린 배열" class="phonescreens-full-img">
+    </div>
+</section>
+
+<!-- ───────────── 15. FOOTER ───────────── -->
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-team">
+            <div class="footer-role">
+                <p class="role-label">PLANER</p>
+                <p class="role-name">이준석</p>
+            </div>
+            <div class="footer-role">
+                <p class="role-label">DESIGNER</p>
+                <p class="role-name">전예진</p>
+            </div>
+            <div class="footer-role">
+                <p class="role-label">PROGRAMMER</p>
+                <p class="role-name">이유정</p>
+            </div>
+        </div>
+        <div class="footer-brand">
+            <p class="footer-logo">DIV</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Reboot. All rights reserved.</p>
+    </div>
+</footer>
+
+<button id="toTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
