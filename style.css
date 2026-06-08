@@ -1823,7 +1823,7 @@ a {
     font-size: clamp(14px, 1.05vw, 20px);
     font-weight: 500;
     color: #111;
-    margin-bottom: 6px;
+    margin-bottom: 20px;
 }
 .tax-hover-desc {
     display: block;
@@ -1833,7 +1833,7 @@ a {
 }
 .tax-hover-text {
     position: absolute;
-    top: clamp(-120px, -11vw, -200px);
+    top: clamp(-140px, -13vw, -220px);
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
