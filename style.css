@@ -155,8 +155,7 @@ a {
     animation-delay: 1.5s;
 }
 .hero-phone img {
-    /* 130px + 25px = 155px */
-    width: clamp(120px, 15vw, 320px);
+    width: 200px;   /* 원하는 크기로 조절 (예: 180px, 220px 등) */
     height: auto;
     display: block;
 }
