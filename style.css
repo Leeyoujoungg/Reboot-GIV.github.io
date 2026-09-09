@@ -146,7 +146,7 @@ a {
 
 .hero-phone {
     position: absolute;
-    bottom: -13%;
+    bottom: -3%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -155,7 +155,7 @@ a {
     animation-delay: 1.5s;
 }
 .hero-phone img {
-    width: 800px; 
+    width: 1300px; 
     height: auto;
     display: block;
 }
