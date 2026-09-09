@@ -156,7 +156,7 @@ a {
 }
 .hero-phone img {
     /* 130px + 25px = 155px */
-    width: clamp(155px, 22vw, 455px);
+    width: clamp(120px, 15vw, 320px);
     height: auto;
     display: block;
 }
