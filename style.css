@@ -1066,7 +1066,7 @@ a {
     z-index: 1;
 }
 .ongi-mascot-img {
-    width: clamp(380px, 44vw, 820px);
+    width: clamp(340px, 40vw, 720px);
     height: auto;
     object-fit: contain;
 }
